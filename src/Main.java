@@ -8,6 +8,12 @@ public class Main {
         BusPoolManager manager = new BusPoolManager(busMarket, busPool);
 
         manager.busMarket.displayBuyableBusses();
+        manager.buyBusFromMarket(2);
+        manager.buyBusFromMarket(4);
+        manager.buyBusFromMarket(6);
+        manager.busPool.showAllBusses();
+        manager.revaluateBus(2);
+        manager.sellBusFromPool(2);
     }
 
 }
