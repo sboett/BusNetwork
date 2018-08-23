@@ -15,6 +15,7 @@ public class BusMarket {
             System.out.println(buyableBusses.get(i).id + " " + buyableBusses.get(i).model + " " + buyableBusses.get(i).mileage + "km " +
                                buyableBusses.get(i).vintage + " " + buyableBusses.get(i).worth);
         }
+
     }
 
 
