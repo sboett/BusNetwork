@@ -1,5 +1,4 @@
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 public enum EModel {
@@ -14,11 +13,11 @@ public enum EModel {
 
     final EManufacturer manufacturer;
     final String busName;
-    final boolean isAbleForDownies;
     final int seats;
+    final boolean isAbleForDownies;
     final Long code;
 
-    EModel(EManufacturer manufacturer, String busName, int seats, boolean isAbleForDownies, Long code) {
+    EModel(final EManufacturer manufacturer, final String busName, final int seats, final boolean isAbleForDownies, final Long code) {
         this.manufacturer = manufacturer;
         this.busName = busName;
         this.seats = seats;
@@ -26,34 +25,10 @@ public enum EModel {
         this.code = code;
     }
 
-    private static final List<EModel> knownModels = Collections.unmodifiableList(Arrays.asList(EModel.values()));
+    private static final List<EModel> knownModels = Arrays.asList(EModel.values());
 
-    public List<EModel> getKnownModels(){
+    public static List<EModel> getKnownModels(){
         return knownModels;
     }
 
-    public EManufacturer getManufacturer() {
-        return manufacturer;
-    }
-
-    public String getBusName() {
-        return busName;
-    }
-
-    public Long getCode() {
-        return code;
-    }
-
-    public int getSeats() {
-        return seats;
-    }
-
-    public boolean isAbleForDownies() {
-        return isAbleForDownies;
-    }
-
-    @Override
-    public String toString() {
-        return busName + " " + seats + " " + isAbleForDownies;
-    }
 }
